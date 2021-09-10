@@ -508,26 +508,28 @@ class CropState extends State<Crop> with TickerProviderStateMixin, Drag {
       }
     }
 
-    if (_action == _CropAction.cropping) {
-      final delta = details.focalPoint - _lastFocalPoint;
-      _lastFocalPoint = details.focalPoint;
+//     if (_action == _CropAction.cropping) {
+//       final delta = details.focalPoint - _lastFocalPoint;
+//       _lastFocalPoint = details.focalPoint;
 
-      final dx = delta.dx / _boundaries.width;
-      final dy = delta.dy / _boundaries.height;
+//       final dx = delta.dx / _boundaries.width;
+//       final dy = delta.dy / _boundaries.height;
 
-      if (_handle == _CropHandleSide.topLeft) {
-        _updateArea(left: dx, top: dy, cropHandleSide: _CropHandleSide.topLeft);
-      } else if (_handle == _CropHandleSide.topRight) {
-        _updateArea(
-            top: dy, right: dx, cropHandleSide: _CropHandleSide.topRight);
-      } else if (_handle == _CropHandleSide.bottomLeft) {
-        _updateArea(
-            left: dx, bottom: dy, cropHandleSide: _CropHandleSide.bottomLeft);
-      } else if (_handle == _CropHandleSide.bottomRight) {
-        _updateArea(
-            right: dx, bottom: dy, cropHandleSide: _CropHandleSide.bottomRight);
-      }
-    } else if (_action == _CropAction.moving) {
+//       if (_handle == _CropHandleSide.topLeft) {
+//         _updateArea(left: dx, top: dy, cropHandleSide: _CropHandleSide.topLeft);
+//       } else if (_handle == _CropHandleSide.topRight) {
+//         _updateArea(
+//             top: dy, right: dx, cropHandleSide: _CropHandleSide.topRight);
+//       } else if (_handle == _CropHandleSide.bottomLeft) {
+//         _updateArea(
+//             left: dx, bottom: dy, cropHandleSide: _CropHandleSide.bottomLeft);
+//       } else if (_handle == _CropHandleSide.bottomRight) {
+//         _updateArea(
+//             right: dx, bottom: dy, cropHandleSide: _CropHandleSide.bottomRight);
+//       }
+//     } else 
+      
+      if (_action == _CropAction.moving) {
       final delta = details.focalPoint - _lastFocalPoint;
       _lastFocalPoint = details.focalPoint;
 
